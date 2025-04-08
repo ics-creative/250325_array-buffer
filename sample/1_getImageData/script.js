@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const canvas = document.querySelector("#myCanvas");
-  canvas.width = 512;
-  canvas.height = 512;
-  canvas.style.width = 512 + "px";
-  canvas.style.height = 512 + "px";
+  const imageWidth = 256;
+  const imageHeight = 256;
+  canvas.width = imageWidth;
+  canvas.height = imageHeight;
   const ctx = canvas.getContext("2d");
   const image = await new Promise((resolve) => {
     const image = document.querySelector("#myImage");
     image.onload = () => resolve(image);
     image.src = "./image.jpg";
   });
-  ctx.drawImage(image, 0, 0);
+  ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
   // Canvasの画素のImageDataをgetImageData()で取得
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
