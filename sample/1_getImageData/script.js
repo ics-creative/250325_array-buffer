@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   canvas.style.height = 512 + "px";
   const ctx = canvas.getContext("2d");
   const image = await new Promise((resolve) => {
-    const image = new Image();
+    const image = document.querySelector("#myImage");
     image.onload = () => resolve(image);
     image.src = "./image.jpg";
   });

@@ -5,9 +5,21 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>CanvasからputImageData()でTypedArrayを読み取って編集するデモ</title>
   <script src="./script.js"></script>
+  <style>
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .arrow {
+    font-size: 2rem;
+  }
+</style>
 </head>
 <body>
-<div>
+<div class="container">
+  <img id="myImage" src="" alt="加工前の画像">
+  <span class="arrow">→</span>
   <canvas id="myCanvas"></canvas>
 </div>
 </body>
