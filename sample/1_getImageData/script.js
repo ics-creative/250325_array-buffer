@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
   ctx.drawImage(image, 0, 0);
 
-  // キャンバスの画素のImageDataをgetImageData()で取得
+  // Canvasの画素のImageDataをgetImageData()で取得
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   // 画素のデータを参照できるビュー配列、Uint8ClampedArrayを取得
   const data = imageData.data;
