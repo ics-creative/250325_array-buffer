@@ -1,13 +1,11 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const canvas = document.querySelector("#myCanvas");
-  canvas.width = 512;
-  canvas.height = 512;
-  canvas.style.width = 512 + "px";
-  canvas.style.height = 512 + "px";
+  const imageWidth = 256;
+  const imageHeight = 256;
+  canvas.width = imageWidth;
+  canvas.height = imageHeight;
   const ctx = canvas.getContext("2d");
 
-  const imageWidth = 512;
-  const imageHeight = 512;
   const pixelSize = imageWidth * imageHeight;
   // ピクセル数*4のUint8ClampedArrayデータを作成。内部では約1MBのArrayBufferが作成される
   const data = new Uint8ClampedArray(imageWidth * imageHeight * 4);
